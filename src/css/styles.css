@@ -201,6 +201,9 @@ td.income{
 td.expanse{
   color: var(--expanse);
 }
+td img {
+  cursor: pointer;
+}
 
 footer{
   text-align: center;
@@ -220,14 +223,34 @@ footer{
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  z-index: 1;
 }
 
 .modal-overlay.active{
   opacity: 1;
   visibility: visible;
   transition: all ease .650s;
- 
-  
+}
+
+.validade-messages{
+  opacity: 0;
+  visibility: hidden;
+
+  color: var(--white-foreground);
+  background-color: var(--expanse);
+  display: hidden;
+  width: 90%;
+  border: 1px solid;
+  padding: 1rem .5rem;
+  border-radius: 4px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 4px;
+}
+.validade-messages.active{
+  opacity: 1;
+  visibility: visible;
+  transition: all ease .650s;
 }
 
 .modal{

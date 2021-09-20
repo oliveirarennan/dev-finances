@@ -31,7 +31,7 @@
           <img src="img/income.svg" alt="Imagem de entradas"> 
 
         </h3>
-        <p>R$ 5.000,00</p>
+        <p id="incomeDisplay">R$ 5.000,00</p>
       </div>
 
       <div class="card">
@@ -39,7 +39,7 @@
           <span>Saídas</span>
           <img src="img/expense.svg" alt="Imagem de saidas">
         </h3>
-          <p>R$ 2.000,00</p>
+          <p id="expenseDisplay">R$ 2.000,00</p>
       </div>
 
       <div class="card total">
@@ -47,7 +47,7 @@
           <span>Total</span>
           <img src="img/total.svg" alt="Imagem de total">
         </h3>
-          <p>R$ 3.000,00</p>
+          <p id="totalDisplay">R$ 3.000,00</p>
       </div>
 
 
@@ -68,32 +68,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="description">Luz</td>
-            <td class="expanse">- R$ 500,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="img/minus.svg" alt="Remover transação">
-            </td>
-          </tr>
 
-          <tr>
-            <td class="description">Criação de Web</td>
-            <td class="income">- R$ 5000,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="img/minus.svg" alt="Remover transação">
-            </td>
-          </tr>
-
-          <tr>
-            <td class="description">Internet</td>
-            <td class="expanse">- R$ 200,00</td>
-            <td class="date">23/01/2021</td>
-            <td>
-              <img src="img/minus.svg" alt="Remover transação">
-            </td>
-          </tr>
         </tbody>
       </table>
     </section>
@@ -102,12 +77,15 @@
 
   <div class="modal-overlay">
     <div class="modal">
+      <div class="validade-messages">
+        Preencha todos os campos
+      </div>
       <div class="moda-content">
         
         <div id="form">
           <h2>Nova transação</h2>
 
-          <form action="#">
+          <form onsubmit="Form.submit(event)">
             <div class="input-group">
               <label for="description" class="sr-only" >Descrição</label>
               <input type="text" id="description" name="description" placeholder="Descrição" />
